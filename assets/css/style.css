@@ -185,6 +185,11 @@ label span {
   font-size: 12px;
 }
 
+.box .main .header .basic-info div span a {
+  text-decoration: none;
+  color: rgba(62, 58, 58, 0.623);
+}
+
 .box .main .header .basic-info div p {
   font-size: 14px;
   font-weight: 300;
@@ -260,11 +265,20 @@ label span {
   background-color: #5bbedc;
 }
 
+.box .main .bottom .info-section .item.skills.progs h5 {
+  border-radius: 7px;
+  padding: 7px;
+  border-bottom: 1px solid #ccc;
+  display: inline-block;
+  margin-right: 5px;
+  padding: 5px;
+}
+
 .box .main .bottom .info-section .item.skills h5 {
   display: inline-block;
   margin-right: 5px;
+  border-bottom: 1px solid #3453;
   padding: 3px;
-  border-bottom: 1px solid #161515;
 }
 
 .box .main .bottom .info-section .item .text {

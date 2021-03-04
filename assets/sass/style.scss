@@ -37,16 +37,19 @@ ul {
         padding: 5px 0;
     }
 }
-a{
+
+a {
     color: $clr2;
 }
-hr{
+
+hr {
     background-color: #000;
     border: none;
     height: 2px;
     margin-top: 4px;
 }
-label{
+
+label {
     border: none;
     display: inline-block;
     width: 60px;
@@ -54,7 +57,8 @@ label{
     border-radius: 30px;
     background-color: $clr5;
     position: relative;
-    span{
+
+    span {
         border-radius: 50%;
         height: 24px;
         width: 24px;
@@ -66,23 +70,29 @@ label{
         transition: .5s;
     }
 }
-#mode{
+
+#mode {
     display: none;
 }
-#mode:checked+label{
-    background-color:$clr1!important;
-    span{
+
+#mode:checked+label {
+    background-color: $clr1 !important;
+
+    span {
         background-color: $clr4;
         left: 34px;
     }
 }
-#mode:checked .main{
+
+#mode:checked .main {
     background-color: violet;
 }
+
 .box {
     height: 100vh;
     display: flex;
     justify-content: center;
+
     .main {
         width: 595px;
         height: 842px;
@@ -134,16 +144,26 @@ label{
                         .text-box {
                             display: flex;
                             flex-direction: column;
-                            &:first-child,&:nth-child(3){
+
+                            &:first-child,
+                            &:nth-child(3) {
                                 width: 53%;
                             }
-                            &:nth-child(2),&:last-child{
+
+                            &:nth-child(2),
+                            &:last-child {
                                 width: 47%;
                             }
+
                         }
                     }
 
                     span {
+                        a {
+                            text-decoration: none;
+                            color: $clr7;
+                        }
+
                         color: $clr7;
                         font-size: 12px;
                     }
@@ -176,7 +196,7 @@ label{
                     font-weight: 500;
                     color: $clr6;
                     border-bottom: 2px solid $clr6;
-                    padding-bottom:  4px;
+                    padding-bottom: 4px;
                     margin-bottom: 12px;
                 }
 
@@ -216,11 +236,26 @@ label{
                     }
 
                     &.skills {
+                        &.progs {
+                            h5 {
+                                // background-color: #3bafe0;
+                                // color: #fff;
+                                // border: none;
+                                border-radius: 7px;
+                                padding: 7px;
+                                border-bottom: 1px solid #ccc;
+
+                                display: inline-block;
+                                margin-right: 5px;
+                                padding: 5px;
+                            }
+                        }
+
                         h5 {
                             display: inline-block;
                             margin-right: 5px;
+                            border-bottom: 1px solid #3453;
                             padding: 3px;
-                            border-bottom: 1px solid $clr1;
                         }
                     }
 
@@ -273,18 +308,21 @@ label{
 
             .header {
                 justify-content: space-between;
-                img{
+
+                img {
                     width: 100px;
                     height: 100px;
                     margin: 1rem 0;
                 }
+
                 .basic-info {
                     .info-text {
                         flex-direction: column;
 
                         .text-box {
                             width: 100% !important;
-                            span{
+
+                            span {
                                 font-size: 11px;
                             }
                         }
@@ -294,13 +332,16 @@ label{
 
             .bottom {
                 flex-direction: column;
-                .info-section{
+
+                .info-section {
                     padding: 0 1rem;
-                    width: 100%!important;
-                    div{
+                    width: 100% !important;
+
+                    div {
                         margin-bottom: 1rem;
                     }
                 }
+
                 .lang-skill {
                     flex-direction: column;
                     align-items: flex-start !important;
