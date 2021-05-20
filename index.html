@@ -2,532 +2,546 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-        crossorigin="anonymous" />
-    <link rel="stylesheet" href="/assets/css/style.min.css">
-    <title>Resume</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="/assets/css/style.min.css">
+  <title>Resume</title>
 </head>
 <style>
-    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap");
-body {
-  font-family: "Roboto";
-  padding: 0;
-  margin: 0;
-  background-color: #636363;
-}
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap");
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.m-0,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-
-i {
-  margin-right: 4px;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-ul li {
-  padding: 5px 0;
-}
-
-a {
-  color: #36abce;
-}
-
-hr {
-  background-color: #000;
-  border: none;
-  height: 2px;
-  margin-top: 4px;
-}
-
-label {
-  border: none;
-  display: inline-block;
-  width: 60px;
-  height: 28px;
-  border-radius: 30px;
-  background-color: #ffffff;
-  position: relative;
-}
-
-label span {
-  border-radius: 50%;
-  height: 24px;
-  width: 24px;
-  display: inline-block;
-  position: absolute;
-  left: 2px;
-  top: 2px;
-  background-color: #161515;
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-#mode {
-  display: none;
-}
-
-#mode:checked + label {
-  background-color: #161515 !important;
-}
-
-#mode:checked + label span {
-  background-color: #323438;
-  left: 34px;
-}
-
-#mode:checked .main {
-  background-color: violet;
-}
-
-.box {
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.box .main {
-  width: 595px;
-  height: 842px;
-  background-color: #ffffff;
-  padding: 1rem 1.5rem 1.5rem;
-  margin: auto;
-}
-
-.box .main .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 1rem;
-}
-
-.box .main .header img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin: 1rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.box .main .header .basic-info {
-  color: #161515;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.box .main .header .basic-info h4 {
-  letter-spacing: 2px;
-  font-weight: 400;
-  color: #36abce;
-}
-
-.box .main .header .basic-info .title h3 {
-  font-weight: 600;
-  font-size: 22px;
-  letter-spacing: 2px;
-  padding: .2rem 0rem;
-}
-
-.box .main .header .basic-info div {
-  margin-top: 5px;
-}
-
-.box .main .header .basic-info div.info-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.box .main .header .basic-info div.info-text .text-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.box .main .header .basic-info div.info-text .text-box:first-child, .box .main .header .basic-info div.info-text .text-box:nth-child(3) {
-  width: 53%;
-}
-
-.box .main .header .basic-info div.info-text .text-box:nth-child(2), .box .main .header .basic-info div.info-text .text-box:last-child {
-  width: 47%;
-}
-
-.box .main .header .basic-info div span {
-  color: rgba(62, 58, 58, 0.623);
-  font-size: 12px;
-}
-
-.box .main .header .basic-info div span a {
-  text-decoration: none;
-  color: rgba(62, 58, 58, 0.623);
-}
-
-.box .main .header .basic-info div p {
-  font-size: 14px;
-  font-weight: 300;
-  margin: 5px 0;
-}
-
-.box .main .bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.box .main .bottom .info-section.left {
-  width: 48%;
-}
-
-.box .main .bottom .info-section.right {
-  width: 39%;
-}
-
-.box .main .bottom .info-section h3 {
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: #1c85a9;
-  border-bottom: 2px solid #1c85a9;
-  padding-bottom: 4px;
-  margin-bottom: 12px;
-}
-
-.box .main .bottom .info-section .item {
-  margin-bottom: 10px;
-}
-
-.box .main .bottom .info-section .item ul li {
-  padding: 1px 0;
-  color: #464551;
-  font-size: 13px;
-}
-
-.box .main .bottom .info-section .item.lang-skill {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.box .main .bottom .info-section .item.lang-skill ul {
-  float: right;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.box .main .bottom .info-section .item.lang-skill ul li {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  background-color: #86daf3a6;
-  border-radius: 50%;
-}
-
-.box .main .bottom .info-section .item.lang-skill ul li.filled {
-  background-color: #5bbedc;
-}
-
-.box .main .bottom .info-section .item.skills.progs h5 {
-  border-radius: 7px;
-  padding: 7px;
-  border-bottom: 1px solid #ccc;
-  display: inline-block;
-  margin-right: 5px;
-  padding: 5px;
-}
-
-.box .main .bottom .info-section .item.skills h5 {
-  display: inline-block;
-  margin-right: 5px;
-  border-bottom: 1px solid #3453;
-  padding: 3px;
-}
-
-.box .main .bottom .info-section .item .text {
-  display: inline-block;
-  width: 30%;
-}
-
-.box .main .bottom .info-section .item h4,
-.box .main .bottom .info-section .item h5,
-.box .main .bottom .info-section .item h6 {
-  font-weight: 400;
-  margin: 3px 0;
-}
-
-.box .main .bottom .info-section .item h4 {
-  color: #36abce;
-}
-
-.box .main .bottom .info-section .item h5 {
-  color: #161515;
-}
-
-.box .main .bottom .info-section .item h6 {
-  color: #323438;
-}
-
-.box .main .bottom .info-section .item .descrp {
-  font-size: 13px;
-  margin: 4px 0;
-  color: #464551;
-}
-
-@media screen and (max-width: 676px) {
-  .box {
-    height: auto;
-  }
-  .box .main {
-    height: 100%;
-  }
-  .box .main .header {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .box .main .header img {
-    width: 100px;
-    height: 100px;
-    margin: 1rem 0;
-  }
-  .box .main .header .basic-info .info-text {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .box .main .header .basic-info .info-text .text-box {
-    width: 100% !important;
-  }
-  .box .main .header .basic-info .info-text .text-box span {
-    font-size: 11px;
-  }
-  .box .main .bottom {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .box .main .bottom .info-section {
-    padding: 0 1rem;
-    width: 100% !important;
-  }
-  .box .main .bottom .info-section div {
-    margin-bottom: 1rem;
-  }
-  .box .main .bottom .lang-skill {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start !important;
-        -ms-flex-align: start !important;
-            align-items: flex-start !important;
-  }
-  .box .main .bottom .lang-skill ul {
-    margin: 0;
+  body {
+    font-family: "Roboto";
     padding: 0;
+    margin: 0;
+    background-color: #636363;
   }
-}
+
+  * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .m-0,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+
+  i {
+    margin-right: 4px;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  ul li {
+    padding: 5px 0;
+  }
+
+  a {
+    color: #36abce;
+  }
+
+  hr {
+    background-color: #000;
+    border: none;
+    height: 2px;
+    margin-top: 4px;
+  }
+
+  label {
+    border: none;
+    display: inline-block;
+    width: 60px;
+    height: 28px;
+    border-radius: 30px;
+    background-color: #ffffff;
+    position: relative;
+  }
+
+  label span {
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    background-color: #161515;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+
+  #mode {
+    display: none;
+  }
+
+  #mode:checked+label {
+    background-color: #161515 !important;
+  }
+
+  #mode:checked+label span {
+    background-color: #323438;
+    left: 34px;
+  }
+
+  #mode:checked .main {
+    background-color: violet;
+  }
+
+  .box {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .box .main {
+    width: 595px;
+    height: 842px;
+    background-color: #ffffff;
+    padding: 1rem 1.5rem 1.5rem;
+    margin: auto;
+  }
+
+  .box .main .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .box .main .header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 1rem;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  .box .main .header .basic-info {
+    color: #161515;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .box .main .header .basic-info h4 {
+    letter-spacing: 2px;
+    font-weight: 400;
+    color: #36abce;
+  }
+
+  .box .main .header .basic-info .title h3 {
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 2px;
+    padding: .2rem 0rem;
+  }
+
+  .box .main .header .basic-info div {
+    margin-top: 5px;
+  }
+
+  .box .main .header .basic-info div.info-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .box .main .header .basic-info div.info-text .text-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .box .main .header .basic-info div.info-text .text-box:first-child,
+  .box .main .header .basic-info div.info-text .text-box:nth-child(3) {
+    width: 53%;
+  }
+
+  .box .main .header .basic-info div.info-text .text-box:nth-child(2),
+  .box .main .header .basic-info div.info-text .text-box:last-child {
+    width: 47%;
+  }
+
+  .box .main .header .basic-info div span {
+    color: rgba(62, 58, 58, 0.623);
+    font-size: 12px;
+  }
+
+  .box .main .header .basic-info div span a {
+    text-decoration: none;
+    color: rgba(62, 58, 58, 0.623);
+  }
+
+  .box .main .header .basic-info div p {
+    font-size: 14px;
+    font-weight: 300;
+    margin: 5px 0;
+  }
+
+  .box .main .bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+
+  .box .main .bottom .info-section.left {
+    width: 48%;
+  }
+
+  .box .main .bottom .info-section.right {
+    width: 39%;
+  }
+
+  .box .main .bottom .info-section h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #1c85a9;
+    border-bottom: 2px solid #1c85a9;
+    padding-bottom: 4px;
+    margin-bottom: 12px;
+  }
+
+  .box .main .bottom .info-section .item {
+    margin-bottom: 10px;
+  }
+
+  .box .main .bottom .info-section .item ul li {
+    padding: 1px 0;
+    color: #464551;
+    font-size: 13px;
+  }
+
+  .box .main .bottom .info-section .item.lang-skill {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .box .main .bottom .info-section .item.lang-skill ul {
+    float: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .box .main .bottom .info-section .item.lang-skill ul li {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-color: #86daf3a6;
+    border-radius: 50%;
+  }
+
+  .box .main .bottom .info-section .item.lang-skill ul li.filled {
+    background-color: #5bbedc;
+  }
+
+  .box .main .bottom .info-section .item.skills.progs h5 {
+    border-radius: 7px;
+    padding: 7px;
+    border-bottom: 1px solid #ccc;
+    display: inline-block;
+    margin-right: 5px;
+    padding: 5px;
+  }
+
+  .box .main .bottom .info-section .item.skills h5 {
+    display: inline-block;
+    margin-right: 5px;
+    border-bottom: 1px solid #3453;
+    padding: 3px;
+  }
+
+  .box .main .bottom .info-section .item .text {
+    display: inline-block;
+    width: 30%;
+  }
+
+  .box .main .bottom .info-section .item h4,
+  .box .main .bottom .info-section .item h5,
+  .box .main .bottom .info-section .item h6 {
+    font-weight: 400;
+    margin: 3px 0;
+  }
+
+  .box .main .bottom .info-section .item h4 {
+    color: #36abce;
+  }
+
+  .box .main .bottom .info-section .item h5 {
+    color: #161515;
+  }
+
+  .box .main .bottom .info-section .item h6 {
+    color: #323438;
+  }
+
+  .box .main .bottom .info-section .item .descrp {
+    font-size: 13px;
+    margin: 4px 0;
+    color: #464551;
+  }
+
+  @media screen and (max-width: 676px) {
+    .box {
+      height: auto;
+    }
+
+    .box .main {
+      height: 100%;
+    }
+
+    .box .main .header {
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+    }
+
+    .box .main .header img {
+      width: 100px;
+      height: 100px;
+      margin: 1rem 0;
+    }
+
+    .box .main .header .basic-info .info-text {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    .box .main .header .basic-info .info-text .text-box {
+      width: 100% !important;
+    }
+
+    .box .main .header .basic-info .info-text .text-box span {
+      font-size: 11px;
+    }
+
+    .box .main .bottom {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    .box .main .bottom .info-section {
+      padding: 0 1rem;
+      width: 100% !important;
+    }
+
+    .box .main .bottom .info-section div {
+      margin-bottom: 1rem;
+    }
+
+    .box .main .bottom .lang-skill {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: start !important;
+      -ms-flex-align: start !important;
+      align-items: flex-start !important;
+    }
+
+    .box .main .bottom .lang-skill ul {
+      margin: 0;
+      padding: 0;
+    }
+  }
 </style>
+
 <body>
-    
-    <div class="box center">
-        <div class="main">
-            <div class="header">
-                <div class="basic-info">
-                    <div class="title">
-                        <h3 class="m-0">Sara Ahmadova</h3>
-                        <h4 class="m-0">Web developer</h4>
-                    </div>
-                    <div class="info-text">
-                      
-                        <div class="text-box">
-                            <span><i class="fas fa-phone"></i>+994505028674</span>
-                        </div>
-                        <div class="text-box">
-                            <span><i class="fas fa-link"></i><a href="https://github.com/SaraAhmadova">github.com/SaraAhmadova</a></span>
-                        </div>
-                        <div class="text-box">
-                            <span><i class="fas fa-envelope"></i>sara.ehmedova7@gmail.com</span>
-                        </div>
-                        <div class="text-box">
-                            <span><i class="fas fa-map-marker-alt"></i> Sumgait city, S.Vurgun str.
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <img src="/assets/img/img.jpg" alt="">
 
+  <div class="box center">
+    <div class="main">
+      <div class="header">
+        <div class="basic-info">
+          <div class="title">
+            <h3 class="m-0">Sara Ahmadova</h3>
+            <h4 class="m-0">Web developer</h4>
+          </div>
+          <div class="info-text">
+
+            <div class="text-box">
+              <span><i class="fas fa-phone"></i>+994505028674</span>
             </div>
-            <div class="bottom">
-                <div class="info-section left">
-                    <div>
-                        <h3>Experience</h3>
-                        <div class="item">
-                            <h4>Junior ERP specialist</h4>
-                            <h5>Avrora MMC</h5>
-                            <h6><i class="far fa-calendar-alt"></i>10/2018 - 12/2019 </h6>
-                            <p class="descrp">Worked with ERP program, simple SQL queries</p>
-                        </div>
-                        <div class="item">
-                            <h4>Intern</h4>
-                            <h5>National Assembly
-                            </h5>
-                            <h6><i class="far fa-calendar-alt"></i>02/2018 - 05/2018 </h6>
-                            <p class="descrp">interned HTML, CSS, JavaScript, PHP, MySql</p>
-                        </div>
-                        <div class="item">
-                            <h4>Intern</h4>
-                            <h5>SOCAR ITRI</h5>
-                            <h6><i class="far fa-calendar-alt"></i>11/2017 - 01/2018 </h6>
-                            <p class="descrp">interned HTML, CSS, JavaScript, Sass, Bootstrap</p>
-                        </div>
-                    </div>
-                    <div>
-                        <h3>Languages</h3>
-                        <div class="item lang-skill">
-                            <div class="text">
-                                <h4>English
-                                </h4>
-                                <h5>Intermediate</h5>
-                            </div>
-                            <ul>
-                                <li class="filled"></li>
-                                <li class="filled"></li>
-                                <li class="filled"></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div>
-                        <h3>Projects</h3>
-                        <div class="item">
-                            <ul>
-                                <li><a href="https://cv-code.vercel.app/" target="_blank">https://cv-code</a></li>
-                                <li><a href="https://tony-lilac.vercel.app/#portfolio"
-                                        target="_blank">https://tony-lilac/#home</a></li>
-                                <li><a href="https://wine-website.vercel.app/index.html"
-                                        target="_blank">https://wine-website/index</a></li>
-                                <li><a href="https://yle-front-final.vercel.app"
-                                        target="_blank">https://yle-front-final</a></li>
-                                <li><a href="https://expanding-card.vercel.app/"
-                                        target="_blank">https://expanding-card</a></li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="info-section right">
-                    <div>
-                        <h3>Education</h3>
-                        <div class="item">
-                            <h4>Master / Computer Science
-                            </h4>
-                            <h5>Azerbaijan State University of Economics
-                            </h5>
-                            <h6><i class="far fa-calendar-alt"></i>2018 - 2020 </h6>
-                        </div>
-                        <div class="item">
-                            <h4>Bachelor / Computer
-                                Scinece</h4>
-                            <h5>The Academy Of Public Administration
-                                Under The President Of The Republic
-                                Of Azerbaijan
-                            </h5>
-                            <h6><i class="far fa-calendar-alt"></i>2014 - 2018</h6>
-
-                        </div>
-                        <div class="item">
-                            <h4>Course</h4>
-                            <h5>Code Academy - Programming</h5>
-                            <h6><i class="far fa-calendar-alt"></i>2020</h6>
-                        </div>
-                    </div>
-                    <div>
-                        <h3>Skills</h3>
-                        <div class="item skills progs">
-                            <h4>Programming</h4>
-                            <h5>HTML</h5>
-                            <h5>CSS</h5>
-                            <h5>Sass</h5>
-                            <h5>JavaScript</h5>
-                            <h5>Jquery</h5>
-                            <h5>Bootstrap</h5>
-                            <h5>Github</h5>
-                            <h5>SQL</h5>
-                            <h5>C#</h5>
-                            <h5>ASP.Net</h5>
-                            <h5>Angular</h5>
-                        </div>
-                        <div class="item skills">
-                            <h4>MS Office</h4>
-                            <h5>Word</h5>
-                            <h5>Excel</h5>
-                            <h5>PowerPoint</h5>
-                            <h5>Outlook</h5>
-                        </div>
-                    </div>
-                </div>
+            <div class="text-box">
+              <span><i class="fas fa-link"></i><a
+                  href="https://github.com/SaraAhmadova">github.com/SaraAhmadova</a></span>
             </div>
+            <div class="text-box">
+              <span><i class="fas fa-envelope"></i>sara.ehmedova7@gmail.com</span>
+            </div>
+            <div class="text-box">
+              <span><i class="fas fa-map-marker-alt"></i> Sumgait city, S.Vurgun str.
+              </span>
+            </div>
+          </div>
         </div>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script src="/assets/js/script.js"></script>
+        <img src="/assets/img/img.jpg" alt="">
+
+      </div>
+      <div class="bottom">
+        <div class="info-section left">
+          <div>
+            <h3>Experience</h3>
+            <div class="item">
+              <h4>Junior ERP specialist</h4>
+              <h5>Avrora MMC</h5>
+              <h6><i class="far fa-calendar-alt"></i>10/2018 - 12/2019 </h6>
+              <p class="descrp">Worked with ERP program, simple SQL queries</p>
+            </div>
+            <div class="item">
+              <h4>Intern</h4>
+              <h5>National Assembly
+              </h5>
+              <h6><i class="far fa-calendar-alt"></i>02/2018 - 05/2018 </h6>
+              <p class="descrp">interned HTML, CSS, JavaScript, PHP, MySql</p>
+            </div>
+            <div class="item">
+              <h4>Intern</h4>
+              <h5>SOCAR ITRI</h5>
+              <h6><i class="far fa-calendar-alt"></i>11/2017 - 01/2018 </h6>
+              <p class="descrp">interned HTML, CSS, JavaScript, Sass, Bootstrap</p>
+            </div>
+          </div>
+          <div>
+            <h3>Languages</h3>
+            <div class="item lang-skill">
+              <div class="text">
+                <h4>English
+                </h4>
+                <h5>Intermediate</h5>
+              </div>
+              <ul>
+                <li class="filled"></li>
+                <li class="filled"></li>
+                <li class="filled"></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <h3>Projects</h3>
+            <div class="item">
+              <ul>
+                <li><a href="https://jevelin1.vercel.app/" target="_blank">https://jevelin1.vercel.app/</a></li>
+                <li><a href="https://rustic-website-e4mhj699x.vercel.app/" target="_blank">https://rustic-website</a></li>
+                <li><a href="https://tony-lilac.vercel.app/#portfolio" target="_blank">https://tony-lilac/#home</a></li>
+                <li><a href="https://wine-website.vercel.app/index.html" target="_blank">https://wine-website/index</a>
+                </li>
+                <li><a href="https://yle-front-final.vercel.app" target="_blank">https://yle-front-final</a></li>
+                <li><a href="https://expanding-card.vercel.app/" target="_blank">https://expanding-card</a></li>
+                <li><a href="https://cv-code.vercel.app/" target="_blank">https://cv-code</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="info-section right">
+          <div>
+            <h3>Education</h3>
+            <div class="item">
+              <h4>Master / Computer Science
+              </h4>
+              <h5>Azerbaijan State University of Economics
+              </h5>
+              <h6><i class="far fa-calendar-alt"></i>2018 - 2020 </h6>
+            </div>
+            <div class="item">
+              <h4>Bachelor / Computer
+                Scinece</h4>
+              <h5>The Academy Of Public Administration
+                Under The President Of The Republic
+                Of Azerbaijan
+              </h5>
+              <h6><i class="far fa-calendar-alt"></i>2014 - 2018</h6>
+
+            </div>
+            <div class="item">
+              <h4>Course</h4>
+              <h5>Code Academy - Programming</h5>
+              <h6><i class="far fa-calendar-alt"></i>2020</h6>
+            </div>
+          </div>
+          <div>
+            <h3>Skills</h3>
+            <div class="item skills progs">
+              <h4>Programming</h4>
+              <h5>HTML</h5>
+              <h5>CSS</h5>
+              <h5>Sass</h5>
+              <h5>JavaScript</h5>
+              <h5>Jquery</h5>
+              <h5>Bootstrap</h5>
+              <h5>Github</h5>
+              <h5>SQL</h5>
+              <h5>C#</h5>
+              <h5>ASP.Net</h5>
+              <h5>Angular</h5>
+            </div>
+            <div class="item skills">
+              <h4>MS Office</h4>
+              <h5>Word</h5>
+              <h5>Excel</h5>
+              <h5>PowerPoint</h5>
+              <h5>Outlook</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="/assets/js/script.js"></script>
 </body>
 
 </html>
