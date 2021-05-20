@@ -202,7 +202,14 @@ label {
 
                 .item {
                     margin-bottom: 10px;
-
+                    &.projects{
+                        display: flex;
+                        .front{
+                            padding-right: 7px;
+                            margin-right: 7px;
+                            // border-right: .5px solid rgba(126, 199, 233, 0.548);
+                        }
+                    }
                     ul {
                         li {
                             padding: 1px 0;
