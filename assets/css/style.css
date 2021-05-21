@@ -213,12 +213,12 @@ label span {
 }
 
 .box .main .bottom .info-section h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 500;
   color: #1c85a9;
   border-bottom: 2px solid #1c85a9;
   padding-bottom: 4px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .box .main .bottom .info-section .item {
